@@ -1,0 +1,4 @@
+graft src/newsletter
+graft docs
+include *.rst
+global-exclude *.pyc
