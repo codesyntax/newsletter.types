@@ -7,6 +7,12 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
+        id="newsletter.types.AddNewsletterContainer"
+        title="newsletter.types: Add NewsletterContainer"
+    />
+
+
+    <permission
         id="newsletter.types.AddNewsletter"
         title="newsletter.types: Add Newsletter"
     />
