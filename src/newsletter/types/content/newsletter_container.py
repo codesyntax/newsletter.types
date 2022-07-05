@@ -8,57 +8,36 @@ from plone.supermodel import model
 
 # from plone.supermodel.directives import fieldset
 # from z3c.form.browser.radio import RadioFieldWidget
-# from zope import schema
+from zope import schema
 from zope.interface import implementer
 
-# from newsletter.types import _
+from newsletter.types import _
 
 
 class INewsletterContainer(model.Schema):
-    """ Marker interface and Dexterity Python Schema for NewsletterContainer
-    """
-    # If you want, you can load a xml model created TTW here
-    # and customize it in Python:
+    """Marker interface and Dexterity Python Schema for NewsletterContainer"""
 
-    # model.load('newsletter_container.xml')
+    newsletter_header_image_url = schema.TextLine(
+        title=_(u"newsletter_header_image_url"),
+        required=False,
+    )
 
-    # directives.widget(level=RadioFieldWidget)
-    # level = schema.Choice(
-    #     title=_(u'Sponsoring Level'),
-    #     vocabulary=LevelVocabulary,
-    #     required=True
-    # )
+    newsletter_footer_title = schema.TextLine(
+        title=_(u"newsletter_footer_title"),
+        required=False,
+    )
 
-    # text = RichText(
-    #     title=_(u'Text'),
-    #     required=False
-    # )
+    newsletter_footer_address = schema.TextLine(
+        title=_(u"newsletter_footer_address"),
+        required=False,
+    )
 
-    # url = schema.URI(
-    #     title=_(u'Link'),
-    #     required=False
-    # )
-
-    # fieldset('Images', fields=['logo', 'advertisement'])
-    # logo = namedfile.NamedBlobImage(
-    #     title=_(u'Logo'),
-    #     required=False,
-    # )
-
-    # advertisement = namedfile.NamedBlobImage(
-    #     title=_(u'Advertisement (Gold-sponsors and above)'),
-    #     required=False,
-    # )
-
-    # directives.read_permission(notes='cmf.ManagePortal')
-    # directives.write_permission(notes='cmf.ManagePortal')
-    # notes = RichText(
-    #     title=_(u'Secret Notes (only for site-admins)'),
-    #     required=False
-    # )
+    newsletter_footer_telephone = schema.TextLine(
+        title=_(u"newsletter_footer_telephone"),
+        required=False,
+    )
 
 
 @implementer(INewsletterContainer)
 class NewsletterContainer(Container):
-    """ Content-type class for INewsletterContainer
-    """
+    """Content-type class for INewsletterContainer"""
