@@ -32,16 +32,18 @@ class SendEmail(Service):
                 )
                 mailhost = getToolByName(context, "MailHost")
                 mailhost.send(mail.as_string())
-                self.request.response.setStatus(204)
+                self.request.response.setStatus(200)
                 return {
                     "message": "Newsletter well sent",
                 }
             else:
                 self.request.response.setStatus(400)
-                return dict(
-                    error=dict(message="Error creating the newsletter")
-                )
+                return {
+                    "message": "You must fill in all the fields",
+                }
 
         except:
             self.request.response.setStatus(400)
-            return dict(error=dict(message="Error creating the newsletter"))
+            return {
+                "message": "Error creating the newsletter",
+            }
