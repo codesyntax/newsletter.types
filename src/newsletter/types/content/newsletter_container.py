@@ -36,6 +36,18 @@ class INewsletterContainer(model.Schema):
         title=_(u"newsletter_footer_telephone"),
         required=False,
     )
+    newsletter_news_title = schema.TextLine(
+        title=_(u"newsletter_news_title"),
+        required=False,
+    )
+    newsletter_news_url = schema.TextLine(
+        title=_(u"newsletter_news_url"),
+        required=False,
+    )
+    newsletter_news_morelinktext = schema.TextLine(
+        title=_(u"newsletter_news_morelinktext"),
+        required=False,
+    )
 
 
 @implementer(INewsletterContainer)
