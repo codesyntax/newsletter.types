@@ -38,12 +38,7 @@ class SendEmail(Service):
                 }
             else:
                 self.request.response.setStatus(400)
-                return {
-                    "message": "You must fill in all the fields",
-                }
+                return "You must fill in all the fields"
 
         except:
-            self.request.response.setStatus(400)
-            return {
-                "message": "Error creating the newsletter",
-            }
+            return "Error creating the newsletter"
