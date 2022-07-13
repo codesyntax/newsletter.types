@@ -31,33 +31,7 @@
 newsletter.types
 ================
 
-Tell me what your product does
-
-Features
---------
-
-- Can be bullet points
-
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
+Content types for newsletter creation from Volto site. Use it with volto-newsletter Volto addon.
 
 
 Installation
@@ -79,15 +53,11 @@ and then running ``bin/buildout``
 Authors
 -------
 
-Provided by awesome people ;)
+Lur Ibargutxi (libargutxi@codesyntax.com)
 
 
 Contributors
 ------------
-
-Put your name here, you deserve it!
-
-- ?
 
 
 Contribute
